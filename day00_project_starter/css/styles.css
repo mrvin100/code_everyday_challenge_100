@@ -1,0 +1,97 @@
+/* custom css file made by @mrvin100 */
+
+/* import section starts */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* decalration of root variables */
+
+:root {
+  /* colors */
+  --main-clr: rgb(63, 125, 187);
+  --white0: #fff;
+  --white1: #faf9f9;
+  --light-clr: #8a8b8d;
+  --black0: #000;
+  --black1: #2a2b2c;
+  /* borders */
+  --border0: 1px solid rgba(0, 0, 0, 0.05);
+  --border1: 1px solid rgba(0, 0, 0, 0.3);
+  /* font family */
+  --body-font: "Poppins", Arial, sans-serif;
+  /* box shadow */
+  --shadow0: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+/* initialisation of code  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+/* base of code */
+
+html {
+  font-size: 90%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: 0.938rem;
+  font-weight: 400;
+  padding: 1rem;
+  color: var(--black1);
+  background: var(--white1);
+}
+main {
+  border: var(--border0);
+  margin: 1rem 0;
+}
+
+/* reusables classes */
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.heading {
+  font-weight: normal;
+  text-transform: capitalize;
+}
+h1.heading {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.link {
+  color: var(--black1);
+  text-decoration: underline;
+  &:hover {
+    color: var(--light-clr);
+  }
+}
+
+/* header section starts */
+
+.header {
+  border: var(--border0);
+  padding: 1rem;
+}
+
+/* footer section starts */
+
+.footer {
+  border: var(--border0);
+  padding: 1rem;
+  .copyright {
+    text-align: center;
+  }
+}

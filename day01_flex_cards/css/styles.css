@@ -49,9 +49,6 @@ body {
   padding: 1rem;
   color: var(--black1);
   background: var(--white1);
-  min-height: 100vh;
-  display: grid;
-  place-content: center;
 }
 main {
   border: var(--border0);
@@ -89,9 +86,59 @@ h1.heading {
   padding: 1rem;
 }
 
+/* cards section starts */
+
+.cards {
+  .box_container {
+    /* border: var(--border0); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: var(--border0);
+    padding: 1rem 0;
+    .box {
+      cursor: pointer;
+      height: 22rem;
+      width: 5%;
+      object-fit: cover;
+      animation: resizer_down 0.5s linear forwards;
+      &.active {
+        box-shadow: var(--shadow0);
+        /* width: 50%; */
+        animation: resizer_up 0.5s linear forwards;
+      }
+      &:hover {
+        transition: opacity 0.2s linear;
+        opacity: 0.85;
+      }
+    }
+  }
+}
+
+@keyframes resizer_up {
+  from {
+    width: 5%;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes resizer_down {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 5%;
+  }
+}
 /* footer section starts */
 
 .footer {
   border: var(--border0);
   padding: 1rem;
+  .copyright {
+    text-align: center;
+  }
 }
